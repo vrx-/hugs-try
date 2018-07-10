@@ -6,12 +6,10 @@ branches:
         - master
 
 python:
-    - 2.7
-    - 3.5
     - 3.6
 
 install:
-  - pip install .
+  - pip install . pytest-flake8 flake8-docstrings flake8-import-order
 
 script:
-  - pytest
+  - pytest --flake8
